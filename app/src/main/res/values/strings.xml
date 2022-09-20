@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">FoodApp</string>
+    <string name="welcome">Welcome to</string>
+    <string name="instania">Instania</string>
+    <string name="login"><b>Log In</b></string>
+    <string name="signup"><b>Sign Up</b></string>
+
+    <string name="loginhere"><b>Log In Here</b></string>
+    <string name="username">Username</string>
+    <string name="usernamehint">Enter your username here</string>
+    <string name="password">Password</string>
+    <string name="passwordhint">Enter your password here</string>
+    <string name="min8charactores">Minimum 8 Characters</string>
+    <string name="frogotpassword">Frogot Your Password ?</string>
+    <string name="didnthaveaccount">Didn\'t Have and Account ?</string>
+
+    <string name="registerhere">Register Here</string>
+    <string name="firstname">First Name</string>
+    <string name="lastname">Last Name</string>
+    <string name="email">E-mail</string>
+    <string name="mobile">Mobile</string>
+    <string name="birthdate">Birth Date</string>
+    <string name="regpassword">Password</string>
+    <string name="reenterpassword">Re-Enter Password</string>
+    <string name="register"><b>Register</b></string>
+    <string name="alreadyhaveaccount">Already Have an Account ?</string>
+
+    <string name="hiuser"><b>Hi User !</b></string>
+    <string name="logout">Log Out</string>
+    <string name="name">Name</string>
+
+    <string name="editprofile"><b>Edit Your Profile</b></string>
+    <string name="savechanges"><b>Save Changes</b></string>
+
+    <string name="changeyourpassword"><b>Change Your Password</b></string>
+    <string name="currentpassword">Current Password</string>
+    <string name="newpassword">New Password</string>
+    <string name="passwordInfo2">Password must contain at least 8 characters, one lowecase letter, one uppercase letter and number</string>
+
+    <string name="deleteprofile"><b>Delete Your Profile</b></string>
+    <string name="enterpassword">Enter Your Password</string>
+    <string name="deleteprofilewarning"><b>This action cannot be undone and your profile will be deleted permenently with your all details. </b></string>
+    <string name="deleteProfile"><b>Delete Profile</b></string>
+
+    <string name="home"><b>Home</b></string>
+    <string name="myprofile"><b>My Profile</b></string>
+    <string name="myorders"><b>My Orders</b></string>
+    <string name="foodmenu"><b>Food Menu</b></string>
+    <string name="contactus"><b>Contact Us</b></string>
+
+
+
+
+
+</resources>
