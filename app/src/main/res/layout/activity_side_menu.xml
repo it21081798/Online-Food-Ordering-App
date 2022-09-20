@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_gradient2"
+    android:background="@drawable/background_gradient_light"
     tools:context=".SideMenu">
 
     <TextView
         android:id="@+id/txtWhiteBack3"
         android:layout_width="305dp"
         android:layout_height="741dp"
-        android:background="@drawable/round_button"
+        android:background="@drawable/round_button4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

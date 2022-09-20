@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:background="@drawable/background_gradient_light"
     tools:context=".Register">
 
     <TextView
         android:id="@+id/txtWhiteBack2"
-        android:layout_width="378dp"
-        android:layout_height="634dp"
+        android:layout_width="382dp"
+        android:layout_height="650dp"
         android:background="@drawable/round_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -141,13 +141,13 @@
         android:text="@string/registerhere"
         android:textAlignment="center"
         android:textColor="#971D12"
-        android:textSize="20dp"
+        android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.119" />
+        app:layout_constraintVertical_bias="0.129" />
 
     <TextView
         android:id="@+id/txtInstania3"
@@ -163,7 +163,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.004" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/inputBirthDate"

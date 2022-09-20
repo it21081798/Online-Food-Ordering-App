@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_gradient2"
+    android:background="@drawable/background_gradient_light"
     tools:context=".DeleteProfile">
 
     <Button
@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:width="150dp"
-        android:background="@drawable/round_button2"
+        android:background="@drawable/round_button1"
         android:text="@string/deleteProfile"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -26,7 +26,7 @@
         android:id="@+id/inputPassowrd5"
         android:layout_width="336dp"
         android:layout_height="35dp"
-        android:background="@drawable/round_button"
+        android:background="@drawable/round_button4"
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
