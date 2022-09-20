@@ -51,9 +51,10 @@
     <string name="foodmenu"><b>Food Menu</b></string>
     <string name="contactus"><b>Contact Us</b></string>
     <string name="review"><b>All Reviews</b></string>
+    <string name="card"><b>My Cards</b></string>
     <string name="addreview"><b>Add New Review</b></string>
     <string name="addreviewtopic">Review Topic</string>
-    <string name="reviewdescription">Add Review Description</string>
+    <string name="reviewdescription">Review Description</string>
     <string name="addreviewbtn"><b>Save Review</b></string>
     <string name="addyourreview"><b>Add Your Review</b></string>
 

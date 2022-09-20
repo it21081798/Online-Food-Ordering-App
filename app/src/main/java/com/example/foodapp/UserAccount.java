@@ -12,50 +12,68 @@ public class UserAccount extends AppCompatActivity {
     private Button editProfileButton;
     private Button changePasswordButton;
     private Button deleteProfileButton;
+    private Button logoutButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_account);
 
-        editProfileButton = (Button) findViewById(R.id.btnEditProfile);
+        editProfileButton = findViewById(R.id.btnEditProfile);
         editProfileButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openEditProfilePage();
+                goToEditProfilePage();
             }
         });
 
 
-        changePasswordButton = (Button) findViewById(R.id.btnChangePassword1);
+        changePasswordButton = findViewById(R.id.btnChangePassword);
         changePasswordButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openChangePasswordPage();
+                goToChangePasswordPage();
             }
         });
 
-        deleteProfileButton = (Button) findViewById(R.id.btnDeleteProfile1);
+
+        deleteProfileButton = findViewById(R.id.btnDeleteProfile);
         deleteProfileButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openDeleteProfilePage();
+                goToDeleteProfilePage();
             }
         });
+
+
+        logoutButton = findViewById(R.id.btnLogout);
+        logoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToMainPage();
+            }
+        });
+
     }
 
-    public void openEditProfilePage(){
+    public void goToEditProfilePage(){
         Intent intent = new Intent(this, EditProfile.class);
         startActivity(intent);
     }
 
-    public void openChangePasswordPage(){
+    public void goToChangePasswordPage(){
         Intent intent = new Intent(this, ChangePassword.class);
         startActivity(intent);
     }
 
-    public void openDeleteProfilePage(){
+    public void goToDeleteProfilePage(){
         Intent intent = new Intent(this, DeleteProfile.class);
         startActivity(intent);
     }
+
+    public void goToMainPage(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
 }
