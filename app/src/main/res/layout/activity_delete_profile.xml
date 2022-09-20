@@ -8,7 +8,7 @@
     tools:context=".DeleteProfile">
 
     <Button
-        android:id="@+id/btnDeleteProfile"
+        android:id="@+id/btnDeleteProfile1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:width="150dp"

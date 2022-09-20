@@ -8,7 +8,7 @@
     tools:context=".UserAccount">
 
     <Button
-        android:id="@+id/btnLogin3"
+        android:id="@+id/btnLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:width="100dp"
@@ -167,12 +167,12 @@
         app:layout_constraintVertical_bias="0.541" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnEditProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:width="150dp"
         android:background="@drawable/round_button1"
-        android:text="Edit Profile"
+        android:text="@string/editprofileinaccount"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -182,12 +182,12 @@
         app:layout_constraintVertical_bias="0.685" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnChangePassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:width="150dp"
         android:background="@drawable/round_button1"
-        android:text="Change Password"
+        android:text="@string/changepasswordinaccount"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -197,12 +197,12 @@
         app:layout_constraintVertical_bias="0.792" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnDeleteProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:width="150dp"
         android:background="@drawable/round_button4"
-        android:text="Delete Profile"
+        android:text="@string/deleteprofileinaccount"
         android:textColor="#E91E63"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -27,7 +27,7 @@ public class UserAccount extends AppCompatActivity {
         });
 
 
-        changePasswordButton = (Button) findViewById(R.id.btnChangePassword);
+        changePasswordButton = (Button) findViewById(R.id.btnChangePassword1);
         changePasswordButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -35,7 +35,7 @@ public class UserAccount extends AppCompatActivity {
             }
         });
 
-        deleteProfileButton = (Button) findViewById(R.id.btnDeleteProfile);
+        deleteProfileButton = (Button) findViewById(R.id.btnDeleteProfile1);
         deleteProfileButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
