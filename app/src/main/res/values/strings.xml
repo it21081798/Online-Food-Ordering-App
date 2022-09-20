@@ -14,8 +14,8 @@
     <string name="frogotpassword">Frogot Your Password ?</string>
     <string name="didnthaveaccount">Didn\'t Have and Account ?</string>
 
-    <string name="registerhere">Register Here</string>
-    <string name="firstname">First Name</string>
+    <string name="registerhere"><b>Register Here</b></string>
+    <string name="fullname">Full Name</string>
     <string name="lastname">Last Name</string>
     <string name="email">E-mail</string>
     <string name="mobile">Mobile</string>
@@ -47,6 +47,7 @@
     <string name="myorders"><b>My Orders</b></string>
     <string name="foodmenu"><b>Food Menu</b></string>
     <string name="contactus"><b>Contact Us</b></string>
+    <string name="review"><b>Reviews</b></string>
 
 
 
