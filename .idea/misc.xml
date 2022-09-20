@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Online_Food_Delivery_App/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.27" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Online_Food_Delivery_App/app/src/main/res/drawable/orange2_button.xml" value="0.27" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Online_Food_Delivery_App/app/src/main/res/drawable/orange3_button.xml" value="0.27" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Online_Food_Delivery_App/app/src/main/res/drawable/orange_button.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Online_Food_Delivery_App/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Online_Food_Delivery_App/app/src/main/res/layout/activity_pay_methods.xml" value="0.1641337386018237" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Online_Food_Delivery_App/app/src/main/res/layout/activity_payment_method.xml" value="0.176" />
         <entry key="..\:/Users/Shyaminda/Documents/Android_Studio/FoodApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.261" />
         <entry key="..\:/Users/Shyaminda/Documents/Android_Studio/FoodApp/app/src/main/res/drawable/background_gradient.xml" value="0.2425" />
         <entry key="..\:/Users/Shyaminda/Documents/Android_Studio/FoodApp/app/src/main/res/drawable/background_gradient2.xml" value="0.254" />
@@ -36,5 +43,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.176" />
+      </ProjectState>
+    </option>
   </component>
 </project>
