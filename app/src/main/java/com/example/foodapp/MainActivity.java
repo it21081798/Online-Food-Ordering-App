@@ -10,6 +10,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     //This is comment
+    /*Another Comment*/
     private Button loginButton;
     private Button signUpButton;
 
