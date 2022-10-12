@@ -7,21 +7,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class PaymentMethod extends AppCompatActivity {
-private ConstraintLayout startBtn;
+public class saveCardDetails extends AppCompatActivity {
+    private ConstraintLayout SBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_payment_method);
+        setContentView(R.layout.activity_save_card_details);
 
-        startBtn=findViewById(R.id.startBtn);
-        startBtn.setOnClickListener(new View.OnClickListener() {
+        SBtn=findViewById(R.id.SBtn);
+        SBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(PaymentMethod.this,cardDetails.class));
+                startActivity(new Intent(saveCardDetails.this,updateCardDetails.class));
             }
         });
-
-
-        }
+    }
 }

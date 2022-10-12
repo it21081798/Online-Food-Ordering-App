@@ -8,51 +8,23 @@
     tools:context=".EditProfile">
 
 
-    <TextView
-        android:id="@+id/txtLastName2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/lastname"
-        android:textColor="#0B0A0A"
-        android:textSize="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.642"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.183" />
-
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/inputFirstName2"
-        android:layout_width="157dp"
+        android:layout_width="329dp"
         android:layout_height="35dp"
         android:background="@drawable/round_button4"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.137"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.221" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/inputLastName2"
-        android:layout_width="145dp"
-        android:layout_height="36dp"
-        android:background="@drawable/round_button4"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.849"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.221" />
+        app:layout_constraintVertical_bias="0.218" />
 
     <TextView
         android:id="@+id/txtFirstName2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/firstname"
+        android:text="@string/fullname"
         android:textColor="#0B0A0A"
         android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"

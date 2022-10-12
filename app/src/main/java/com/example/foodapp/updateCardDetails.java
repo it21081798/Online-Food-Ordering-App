@@ -2,22 +2,13 @@ package com.example.foodapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 
-public class EditProfile extends AppCompatActivity {
-
-
+public class updateCardDetails extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_profile);
-
-
+        setContentView(R.layout.activity_update_card_details);
     }
-
-
 }
