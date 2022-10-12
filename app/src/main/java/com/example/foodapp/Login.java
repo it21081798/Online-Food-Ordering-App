@@ -30,3 +30,5 @@ public class Login extends AppCompatActivity {
         startActivity(intent);
     }
 }
+
+//add loyalty customers
