@@ -14,6 +14,7 @@ public class SideMenu extends AppCompatActivity {
     TextView foodMenu;
     TextView myOrders;
     TextView reviews;
+    TextView cards;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,15 @@ public class SideMenu extends AppCompatActivity {
             }
         });
 
+        cards = findViewById(R.id.txtCard);
+        cards.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) { goToMycards(); }
+        });
+
+
+
+
 
 
     }
@@ -63,6 +73,14 @@ public class SideMenu extends AppCompatActivity {
         Intent intent = new Intent(this, ListReview.class);
         startActivity(intent);
     }
+
+    public void goToMycards(){
+        Intent intent = new Intent(this,saveCardDetails.class);
+        startActivity(intent);
+    }
+
+
+
 
 
 }
