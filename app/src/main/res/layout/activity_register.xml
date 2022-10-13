@@ -35,7 +35,7 @@
         app:layout_constraintVertical_bias="0.932" />
 
     <EditText
-        android:id="@+id/inputPassowrd2"
+        android:id="@+id/inputReEnterPasswordReg"
         android:layout_width="336dp"
         android:layout_height="35dp"
         android:layout_marginStart="8dp"
@@ -92,7 +92,7 @@
         app:layout_constraintVertical_bias="0.868" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/inputFirstName"
+        android:id="@+id/inputFullName"
         android:layout_width="328dp"
         android:layout_height="37dp"
         android:layout_marginStart="8dp"
@@ -253,7 +253,7 @@
         app:layout_constraintVertical_bias="0.38" />
 
     <EditText
-        android:id="@+id/inputPassowrd1"
+        android:id="@+id/inputPassowrdReg"
         android:layout_width="336dp"
         android:layout_height="35dp"
         android:layout_marginStart="8dp"
