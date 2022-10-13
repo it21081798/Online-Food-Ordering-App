@@ -4,55 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_gradient2"
+    android:background="@drawable/background_gradient_light"
     tools:context=".EditProfile">
 
 
-    <TextView
-        android:id="@+id/txtLastName2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/lastname"
-        android:textColor="#0B0A0A"
-        android:textSize="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.642"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.183" />
-
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/inputFirstName2"
-        android:layout_width="157dp"
+        android:layout_width="329dp"
         android:layout_height="35dp"
-        android:background="@drawable/round_button"
+        android:background="@drawable/round_button4"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.137"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.221" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/inputLastName2"
-        android:layout_width="145dp"
-        android:layout_height="36dp"
-        android:background="@drawable/round_button"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.849"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.221" />
+        app:layout_constraintVertical_bias="0.218" />
 
     <TextView
         android:id="@+id/txtFirstName2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/firstname"
+        android:text="@string/fullname"
         android:textColor="#0B0A0A"
         android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -66,7 +38,7 @@
         android:id="@+id/inputBirthDate2"
         android:layout_width="331dp"
         android:layout_height="35dp"
-        android:background="@drawable/round_button"
+        android:background="@drawable/round_button4"
         android:ems="10"
         android:inputType="date"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -94,7 +66,7 @@
         android:id="@+id/inputEmail2"
         android:layout_width="329dp"
         android:layout_height="35dp"
-        android:background="@drawable/round_button"
+        android:background="@drawable/round_button4"
         android:ems="10"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -122,7 +94,7 @@
         android:id="@+id/inputMobile2"
         android:layout_width="333dp"
         android:layout_height="35dp"
-        android:background="@drawable/round_button"
+        android:background="@drawable/round_button4"
         android:ems="10"
         android:inputType="phone"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -214,7 +186,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:width="150dp"
-        android:background="@drawable/round_button2"
+        android:background="@drawable/round_button1"
         android:text="@string/savechanges"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -5,12 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_gradient_light"
-    tools:context=".Login">
+    tools:context=".Login"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="-12dp">
 
     <TextView
         android:id="@+id/txtInstania2"
         android:layout_width="216dp"
         android:layout_height="65dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="@font/lobster_regular"
         android:text="@string/instania"
         android:textAlignment="center"
@@ -21,24 +27,31 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.049" />
+        app:layout_constraintVertical_bias="0.03" />
 
     <ImageView
         android:id="@+id/imgLogo2"
         android:layout_width="69dp"
         android:layout_height="67dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.151"
+        app:layout_constraintVertical_bias="0.129"
         app:srcCompat="@drawable/foodiction" />
 
     <TextView
         android:id="@+id/txtWhiteBack"
         android:layout_width="345dp"
         android:layout_height="481dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/round_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,10 +96,10 @@
         app:layout_constraintVertical_bias="0.519" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/inputPassword"
+        android:id="@+id/inputPasswordLogin"
         android:layout_width="303dp"
         android:layout_height="35dp"
-        android:background="@drawable/login_form_inputs"
+        android:background="@drawable/round_button4"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -100,6 +113,10 @@
         android:id="@+id/txtLogInHere"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/round_button"
         android:text="@string/loginhere"
         android:textAlignment="center"
@@ -110,7 +127,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.327" />
+        app:layout_constraintVertical_bias="0.315" />
 
     <TextView
         android:id="@+id/txtUsername"
@@ -140,7 +157,7 @@
         android:id="@+id/inputUsername"
         android:layout_width="303dp"
         android:layout_height="35dp"
-        android:background="@drawable/login_form_inputs"
+        android:background="@drawable/round_button4"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

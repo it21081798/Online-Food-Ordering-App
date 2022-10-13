@@ -5,77 +5,66 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_gradient_light"
-    tools:context=".ChangePassword">
+    tools:context=".AddReview">
 
-    <TextView
-        android:id="@+id/txtPasswordInfo2"
-        android:layout_width="322dp"
-        android:layout_height="52dp"
-        android:text="@string/passwordInfo2"
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/inputFirstName3"
+        android:layout_width="328dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/round_button4"
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.597" />
+        app:layout_constraintVertical_bias="0.219" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/inputFirstName4"
+        android:layout_width="325dp"
+        android:layout_height="204dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/round_button4"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.463" />
 
     <Button
-        android:id="@+id/btnChangePassword1"
+        android:id="@+id/btnAddReview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:width="150dp"
+        android:height="20dp"
         android:background="@drawable/round_button1"
-        android:text="@string/savechanges"
+        android:paddingLeft="1dp"
+        android:paddingTop="1dp"
+
+        android:paddingRight="1dp"
+        android:paddingBottom="1dp"
+        android:text="@string/addreviewbtn"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txtTopBack3"
-        app:layout_constraintVertical_bias="0.733" />
-
-    <EditText
-        android:id="@+id/inputPassowrd4"
-        android:layout_width="336dp"
-        android:layout_height="35dp"
-        android:background="@drawable/round_button4"
-        android:ems="10"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.377" />
-
-    <TextView
-        android:id="@+id/txtPassowrd3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/newpassword"
-        android:textColor="#0B0A0A"
         android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.339" />
+        app:layout_constraintVertical_bias="0.737" />
 
     <TextView
-        android:id="@+id/txtChangePassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/changeyourpassword"
-        android:textSize="22dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.115" />
-
-    <TextView
-        android:id="@+id/txtTopBack3"
+        android:id="@+id/txtTopBack7"
         android:layout_width="414dp"
         android:layout_height="45dp"
         android:background="#F9FFCA"
@@ -87,7 +76,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/txtHeadInstania2"
+        android:id="@+id/txtHeadInstania6"
         android:layout_width="223dp"
         android:layout_height="47dp"
         android:fontFamily="@font/lobster_regular"
@@ -102,63 +91,53 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <EditText
-        android:id="@+id/inputPassowrd"
-        android:layout_width="336dp"
-        android:layout_height="35dp"
-        android:background="@drawable/round_button4"
-        android:ems="10"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.245" />
-
     <TextView
-        android:id="@+id/txtPassowrd2"
+        android:id="@+id/txtAddReviewTopic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/currentpassword"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/addreview"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.097" />
+
+    <TextView
+        android:id="@+id/txtAddReviewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/addreviewtopic"
         android:textColor="#0B0A0A"
         android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintHorizontal_bias="0.091"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.21" />
-
-    <EditText
-        android:id="@+id/inputPassowrd3"
-        android:layout_width="336dp"
-        android:layout_height="35dp"
-        android:layout_marginBottom="336dp"
-        android:background="@drawable/round_button4"
-        android:ems="10"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintVertical_bias="0.169" />
 
     <TextView
-        android:id="@+id/txtReEnterPassword2"
+        android:id="@+id/txtAddReviewDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/reenterpassword"
+        android:text="@string/reviewdescription"
         android:textColor="#0B0A0A"
         android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.141"
+        app:layout_constraintHorizontal_bias="0.119"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.471" />
+        app:layout_constraintVertical_bias="0.289" />
 
     <ImageView
-        android:id="@+id/imgHeadLogo2"
+        android:id="@+id/imgHeadLogo6"
         android:layout_width="38dp"
         android:layout_height="33dp"
         android:layout_marginTop="4dp"
@@ -169,7 +148,7 @@
         app:srcCompat="@drawable/foodiction" />
 
     <ImageView
-        android:id="@+id/btnToMenu3"
+        android:id="@+id/btnToMenu7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FoodApp</string>
+    <string name="app_name">Instania</string>
     <string name="welcome">Welcome to</string>
     <string name="instania">Instania</string>
     <string name="login"><b>Log In</b></string>
@@ -14,8 +14,8 @@
     <string name="frogotpassword">Frogot Your Password ?</string>
     <string name="didnthaveaccount">Didn\'t Have and Account ?</string>
 
-    <string name="registerhere">Register Here</string>
-    <string name="firstname">First Name</string>
+    <string name="registerhere"><b>Register Here</b></string>
+    <string name="fullname">Full Name</string>
     <string name="lastname">Last Name</string>
     <string name="email">E-mail</string>
     <string name="mobile">Mobile</string>
@@ -28,6 +28,9 @@
     <string name="hiuser"><b>Hi User !</b></string>
     <string name="logout">Log Out</string>
     <string name="name">Name</string>
+    <string name="editprofileinaccount"><b>Edit Profile</b></string>
+    <string name="changepasswordinaccount"><b>Change Password</b></string>
+    <string name="deleteprofileinaccount"><b>Delete Profile</b></string>
 
     <string name="editprofile"><b>Edit Your Profile</b></string>
     <string name="savechanges"><b>Save Changes</b></string>
@@ -49,7 +52,13 @@
     <string name="contactus"><b>Contact Us</b></string>
 
 
-
+    <string name="review"><b>All Reviews</b></string>
+    <string name="card"><b>My Cards</b></string>
+    <string name="addreview"><b>Add New Review</b></string>
+    <string name="addreviewtopic">Review Topic</string>
+    <string name="reviewdescription">Review Description</string>
+    <string name="addreviewbtn"><b>Save Review</b></string>
+    <string name="addyourreview"><b>Add Your Review</b></string>
 
 
 </resources>
