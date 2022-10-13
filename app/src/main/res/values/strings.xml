@@ -60,5 +60,35 @@
     <string name="addreviewbtn"><b>Save Review</b></string>
     <string name="addyourreview"><b>Add Your Review</b></string>
 
+    <string name="btnBack">Back</string>
+    <string name="cart_heading">Cart</string>
+    <string name="Foodname">Barbeque Chicken Pizza</string>
+    <string name="addon_txt">Addons :</string>
+    <string name="addonDes">Extra Cheese</string>
+    <string name="addonDes2">Black Olives</string>
+    <string name="Quantity_txt">Quantity</string>
+    <string name="decrement_btn">-</string>
+    <string name="checkout_btn">Checkout</string>
+    <string name="subtotal_txt">Subtotal</string>
+    <string name="delivery_txt">Delivery Charges</string>
+    <string name="total_txt">Total</string>
+    <string name="orderInfo_txt">Order Info</string>
+    <string name="name_txt">Name</string>
+    <string name="phone_txt">Phone Number</string>
+    <string name="delAdress_txt">Delivery Address</string>
+    <string name="canclOdr_txt">Cancel Order</string>
+    <string name="submit_btn1">Submit</string>
+    <string name="editOrdr_btn">Edit Order</string>
+    <string name="editDelvry_btn">Edit Delivery Details</string>
+    <string name="update_btn">Update</string>
+    <string name="feedback_txt">Feedback</string>
+    <string name="ordrDetls_heading">Order Details</string>
+    <string name="delivryDetls_heading">Delivery Details</string>
+    <string name="ordrSummry_heading">Order Summary</string>
+    <string name="updtDelryDetls_heading">Update Delivery Details</string>
+    <string name="updtOrdrDetls_heading">Update Order Details</string>
+    <string name="myOrdrs_heading">My Orders</string>
+    <string name="ordrId_txt">Order ID</string>
+
 
 </resources>
