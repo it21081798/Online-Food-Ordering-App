@@ -52,6 +52,12 @@ public class SideMenu extends AppCompatActivity {
             public void onClick(View view) { goToMycards(); }
         });
 
+        foodMenu = findViewById(R.id.txtMenuFoodMenu);
+        foodMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) { goToFoodMenu(); }
+        });
+
 
 
 
@@ -76,6 +82,11 @@ public class SideMenu extends AppCompatActivity {
 
     public void goToMycards(){
         Intent intent = new Intent(this,saveCardDetails.class);
+        startActivity(intent);
+    }
+
+    public void  goToFoodMenu(){
+        Intent intent = new Intent(this, MainMenu.class);
         startActivity(intent);
     }
 
