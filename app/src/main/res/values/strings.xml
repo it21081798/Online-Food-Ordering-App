@@ -24,6 +24,7 @@
     <string name="reenterpassword">Re-Enter Password</string>
     <string name="register"><b>Register</b></string>
     <string name="alreadyhaveaccount">Already Have an Account ?</string>
+    <string name="passwordPattern">Password Should Contain Minimum 8 Characters, At Least One Letter and At least One Digit</string>
 
     <string name="hiuser"><b>Hi User !</b></string>
     <string name="logout">Log Out</string>

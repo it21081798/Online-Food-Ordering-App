@@ -95,20 +95,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.519" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/inputPasswordLogin"
-        android:layout_width="303dp"
-        android:layout_height="35dp"
-        android:background="@drawable/round_button4"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.575"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.563"
-        tools:ignore="TouchTargetSizeCheck" />
-
     <TextView
         android:id="@+id/txtLogInHere"
         android:layout_width="wrap_content"
@@ -144,9 +130,9 @@
         app:layout_constraintVertical_bias="0.393" />
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
         android:layout_width="256dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -156,8 +142,10 @@
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/inputUsername"
         android:layout_width="303dp"
-        android:layout_height="35dp"
+        android:layout_height="38dp"
         android:background="@drawable/round_button4"
+        android:hint="example@gmail.com"
+        android:paddingLeft="10dp"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -168,40 +156,59 @@
 
     <TextView
         android:id="@+id/txtPasswordInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/min8charactores"
+        android:layout_width="305dp"
+        android:layout_height="37dp"
+        android:text="@string/passwordPattern"
         android:textSize="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.821"
+        app:layout_constraintHorizontal_bias="0.584"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.606" />
+        app:layout_constraintVertical_bias="0.628" />
 
     <TextView
         android:id="@+id/txtFrogetPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/frogotpassword"
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.229"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.835" />
+        app:layout_constraintVertical_bias="0.823" />
 
     <TextView
         android:id="@+id/txtDidntHaveAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/didnthaveaccount"
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.876" />
+
+    <EditText
+        android:id="@+id/inputPasswordLogin"
+        android:layout_width="303dp"
+        android:layout_height="38dp"
+        android:background="@drawable/round_button4"
+        android:ems="10"
+        android:hint="@string/min8charactores"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.562" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
