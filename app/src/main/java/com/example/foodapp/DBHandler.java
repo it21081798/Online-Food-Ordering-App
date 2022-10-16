@@ -3,12 +3,13 @@ package com.example.foodapp;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBHandler extends SQLiteOpenHelper {
 
-    public static final String DB_NAME = "Instania";
+    public static final String DB_NAME = "Instania.db";
 
     public DBHandler(Context context) {
         super(context, DB_NAME, null, 1);
@@ -17,7 +18,7 @@ public class DBHandler extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         String DbEntries =
-                "CREATE TABLE " +UserTable.Users.TABLE_NAME+ " (" +
+                "CREATE TABLE " +UserTable.Users.USER_TABLE_NAME+ " (" +
                         UserTable.Users.ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                         UserTable.Users.COLUMN_FULL_NAME + " TEXT," +
                         UserTable.Users.COLUMN_EMAIL + " TEXT,"  +
@@ -34,7 +35,7 @@ public class DBHandler extends SQLiteOpenHelper {
 
     }
 
-    public void registerUser(UserModel userModel){
+    public boolean registerUser(UserModel userModel){
         SQLiteDatabase sqLiteDatabase = getWritableDatabase();
         ContentValues contentValues = new ContentValues();
 
@@ -46,8 +47,31 @@ public class DBHandler extends SQLiteOpenHelper {
         contentValues.put(UserTable.Users.COLUMN_REG_DATE, userModel.getRegDate());
         contentValues.put(UserTable.Users.COLUMN_PASSWORD, userModel.getPassword());
 
-        sqLiteDatabase.insert(UserTable.Users.TABLE_NAME, null, contentValues);
+        long result = sqLiteDatabase.insert(UserTable.Users.USER_TABLE_NAME, null, contentValues);
         sqLiteDatabase.close();
+
+        if (result == -1)
+            return false;
+        else
+            return true;
+    }
+
+    public boolean checkUsername(String username){
+        SQLiteDatabase sqLiteDatabase = getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from Users where "+UserTable.Users.COLUMN_EMAIL+" = ?", new String[] {username});
+        if (cursor.getCount() > 0)
+            return true;
+        else
+            return false;
+    }
+
+    public boolean login(String username, String password){
+        SQLiteDatabase sqLiteDatabase = getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from Users where Email = ? and Password = ?", new String[] {username, password});
+        if (cursor.getCount() > 0)
+            return true;
+        else
+            return false;
     }
 
 }

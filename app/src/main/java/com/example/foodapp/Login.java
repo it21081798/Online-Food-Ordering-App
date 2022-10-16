@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
+import android.webkit.SafeBrowsingResponse;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -25,6 +26,7 @@ public class Login extends AppCompatActivity {
     private Button loginButtonInLogin;
     private EditText username, password;
     private TextView didntHaveAccount;
+    DBHandler dbHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,12 +37,23 @@ public class Login extends AppCompatActivity {
         username = findViewById(R.id.inputUsername);
         password = findViewById(R.id.inputPasswordLogin);
         didntHaveAccount = findViewById(R.id.txtDidntHaveAccount);
+        dbHandler = new DBHandler(this);
 
         loginButtonInLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                String userEmail = username.getText().toString();
+                String userPassword = password.getText().toString();
+                boolean res = dbHandler.login(userEmail, userPassword);
+
                 if (validateEmail() && validatePassword()){
-                    openProfile();
+                    if (res) {
+                        Toast.makeText(getApplicationContext(), "Login Successful ", Toast.LENGTH_LONG).show();
+                        openProfile();
+                    }
+                    else {
+                        Toast.makeText(getApplicationContext(), "User Not Found !", Toast.LENGTH_LONG).show();                   }
                 }
                 else {
                     Toast.makeText(getApplicationContext(), "Invalid Login Credentials", Toast.LENGTH_SHORT).show();
@@ -96,6 +109,12 @@ public class Login extends AppCompatActivity {
         else {
             return true;
         }
+    }
+
+    public void login(View view){
+        UserModel userModel = new UserModel()
+        SessionManagement sessionManagement = new SessionManagement((Login.this));
+        sessionManagement.saveSession();
     }
 }
 

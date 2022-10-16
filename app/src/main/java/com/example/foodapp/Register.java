@@ -22,7 +22,8 @@ public class Register extends AppCompatActivity {
     private static final Pattern PASSWORD_PATTERN =
             Pattern.compile("^" +
                     "(?=.*[0-9])" +         //at least 1 digit
-                    "(?=.*[a-zA-Z])" +      //any letter
+                    "(?=.*[a-z])" +         //at least 1 simple letter
+                    "(?=.*[A-Z])" +         //at least 1 capital letter
                     ".{8,}" +               //at least 8 characters
                     "$");
 
@@ -71,7 +72,6 @@ public class Register extends AppCompatActivity {
                     }
                 }, year, month, date);
                 dialog.show();
-
             }
         });
 
@@ -95,9 +95,19 @@ public class Register extends AppCompatActivity {
 
                if (validateName() && validateEmail() && validateMobile() && validBirthDate() && validatePassword()){
                    UserModel userModel = new UserModel(userFullName, userEmail, userMobile, userBirthDate, userPassword, regDate);
-                   dbHandler.registerUser(userModel);
-                   Toast.makeText(getApplicationContext(), "Registration Successful !", Toast.LENGTH_LONG).show();
-                   goToMenuPage();
+
+                   if (!dbHandler.checkUsername(userEmail)){
+                       boolean result = dbHandler.registerUser(userModel);
+
+                       if (result) {
+                           Toast.makeText(getApplicationContext(), "Registration Successful !", Toast.LENGTH_LONG).show();
+                           goToMenuPage();
+                       }else
+                           Toast.makeText(getApplicationContext(), "Registration Unsuccessful !", Toast.LENGTH_LONG).show();
+                   }else {
+                       Toast.makeText(getApplicationContext(), "User Already Existed! Please Login", Toast.LENGTH_LONG).show();
+                       email.setError("Email is Already Taken !");
+                   }
                }
                else
                    Toast.makeText(getApplicationContext(), "Please Fill Required Fields Correctly !", Toast.LENGTH_SHORT).show();
