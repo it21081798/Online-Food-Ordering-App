@@ -90,7 +90,7 @@ public class Register extends AppCompatActivity {
                String userMobile = mobile.getText().toString();
                String userBirthDate = birthDate.getText().toString();
                String userPassword = password.getText().toString();
-               String userRePassword = rePassword.getText().toString();
+               //String userRePassword = rePassword.getText().toString();
                long regDate = System.currentTimeMillis();
 
                if (validateName() && validateEmail() && validateMobile() && validBirthDate() && validatePassword()){

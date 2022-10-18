@@ -3,7 +3,9 @@ package com.example.foodapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.CursorIndexOutOfBoundsException;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.webkit.SafeBrowsingResponse;
@@ -50,10 +52,11 @@ public class Login extends AppCompatActivity {
                 if (validateEmail() && validatePassword()){
                     if (res) {
                         Toast.makeText(getApplicationContext(), "Login Successful ", Toast.LENGTH_LONG).show();
-                        openProfile();
+                        login();
+                        //openProfile();
                     }
                     else {
-                        Toast.makeText(getApplicationContext(), "User Not Found !", Toast.LENGTH_LONG).show();                   }
+                        Toast.makeText(getApplicationContext(), "User Not Found ! Check Username and Password !", Toast.LENGTH_LONG).show();                   }
                 }
                 else {
                     Toast.makeText(getApplicationContext(), "Invalid Login Credentials", Toast.LENGTH_SHORT).show();
@@ -69,9 +72,21 @@ public class Login extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        //check user is already logged in
+        SessionManagement sessionManagement = new SessionManagement(Login.this);
+        int userID = sessionManagement.getSession();
+
+        if (userID != -1)
+            openProfile();
+    }
 
     public void openProfile(){
         Intent intent = new Intent(this, SideMenu.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK| Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
 
@@ -111,10 +126,18 @@ public class Login extends AppCompatActivity {
         }
     }
 
-    public void login(View view){
-        UserModel userModel = new UserModel()
-        SessionManagement sessionManagement = new SessionManagement((Login.this));
-        sessionManagement.saveSession();
+    public void login(){
+        try {
+            DBHandler db = new DBHandler(this);
+            UserModel userModel = db.getLoggedUser(username.getText().toString());
+            System.out.println(userModel.getId());
+
+            SessionManagement sessionManagement = new SessionManagement((Login.this));
+            sessionManagement.saveSession(userModel);
+        }catch (CursorIndexOutOfBoundsException ex){
+            System.out.println(ex);
+        }
+        openProfile();
     }
 }
 

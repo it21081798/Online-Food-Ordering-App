@@ -6,18 +6,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class UserAccount extends AppCompatActivity {
 
-    private Button editProfileButton;
-    private Button changePasswordButton;
-    private Button deleteProfileButton;
-    private Button logoutButton;
+    private Button editProfileButton, changePasswordButton, deleteProfileButton, logoutButton;
+    private TextView name, email, mobile, birthDate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_account);
+
 
         editProfileButton = findViewById(R.id.btnEditProfile);
         editProfileButton.setOnClickListener(new View.OnClickListener() {
@@ -50,7 +50,8 @@ public class UserAccount extends AppCompatActivity {
         logoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                goToMainPage();
+                //goToMainPage();
+                logOut();
             }
         });
 
@@ -74,6 +75,13 @@ public class UserAccount extends AppCompatActivity {
     public void goToMainPage(){
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+    }
+
+    public void logOut(){
+        SessionManagement sessionManagement = new SessionManagement(UserAccount.this);
+        sessionManagement.removeSession();
+
+        goToMainPage();
     }
 
 }

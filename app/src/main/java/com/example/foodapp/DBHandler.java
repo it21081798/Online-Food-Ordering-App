@@ -3,6 +3,7 @@ package com.example.foodapp;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.SearchRecentSuggestionsProvider;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -25,7 +26,7 @@ public class DBHandler extends SQLiteOpenHelper {
                         UserTable.Users.COLUMN_BIRTHDATE + " DATE," +
                         UserTable.Users.COLUMN_MOBILE + " INTEGER, " +
                         UserTable.Users.COLUMN_PASSWORD + " TEXT, " +
-                        UserTable.Users.COLUMN_REG_DATE + " )";
+                        UserTable.Users.COLUMN_REG_DATE + "TEXT )";
 
         sqLiteDatabase.execSQL(DbEntries);
     }
@@ -74,5 +75,24 @@ public class DBHandler extends SQLiteOpenHelper {
             return false;
     }
 
-}
+    public UserModel getLoggedUser(String username){
+        SQLiteDatabase sqLiteDatabase = getReadableDatabase();
 
+        Cursor cursor = sqLiteDatabase.query(UserTable.Users.USER_TABLE_NAME, new String[]{UserTable.Users.ID, UserTable.Users.COLUMN_FULL_NAME, UserTable.Users.COLUMN_EMAIL, UserTable.Users.COLUMN_MOBILE, UserTable.Users.COLUMN_BIRTHDATE, UserTable.Users.COLUMN_PASSWORD}, UserTable.Users.COLUMN_EMAIL + "= ?", new String[]{username}, null, null, null);
+        UserModel userModel;
+
+        if(cursor != null) {
+            cursor.moveToFirst();
+            userModel = new UserModel(
+                    cursor.getInt(0),
+                    cursor.getString(1),
+                    cursor.getString(2),
+                    cursor.getString(3),
+                    cursor.getString(4),
+                    cursor.getString(5));
+            return userModel;
+        }
+        else
+            return null;
+    }
+}
