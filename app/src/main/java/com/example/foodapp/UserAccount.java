@@ -3,6 +3,7 @@ package com.example.foodapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,6 +19,21 @@ public class UserAccount extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_account);
 
+        name = findViewById(R.id.txtNameProfile);
+        email = findViewById(R.id.txtEmailProfile);
+        mobile = findViewById(R.id.txtMobileProfile);
+        birthDate = findViewById(R.id.txtBirthDayProfile);
+
+        SharedPreferences sharedPreferences = getSharedPreferences("session", MODE_PRIVATE);
+        String name1 = sharedPreferences.getString("Name", null);
+        String email1 = sharedPreferences.getString("Email", null);
+        String mobile1 = sharedPreferences.getString("Mobile", null);
+        String birthDate1 = sharedPreferences.getString("BirthDate", null);
+
+        name.setText(name1);
+        email.setText(email1);
+        mobile.setText(mobile1);
+        birthDate.setText(birthDate1);
 
         editProfileButton = findViewById(R.id.btnEditProfile);
         editProfileButton.setOnClickListener(new View.OnClickListener() {
@@ -80,8 +96,9 @@ public class UserAccount extends AppCompatActivity {
     public void logOut(){
         SessionManagement sessionManagement = new SessionManagement(UserAccount.this);
         sessionManagement.removeSession();
-
         goToMainPage();
     }
+
+
 
 }

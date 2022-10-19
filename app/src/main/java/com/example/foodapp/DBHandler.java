@@ -24,7 +24,7 @@ public class DBHandler extends SQLiteOpenHelper {
                         UserTable.Users.COLUMN_FULL_NAME + " TEXT," +
                         UserTable.Users.COLUMN_EMAIL + " TEXT,"  +
                         UserTable.Users.COLUMN_BIRTHDATE + " DATE," +
-                        UserTable.Users.COLUMN_MOBILE + " INTEGER, " +
+                        UserTable.Users.COLUMN_MOBILE + " TEXT, " +
                         UserTable.Users.COLUMN_PASSWORD + " TEXT, " +
                         UserTable.Users.COLUMN_REG_DATE + "TEXT )";
 
