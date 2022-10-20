@@ -12,7 +12,7 @@ import android.widget.TextView;
 public class UserAccount extends AppCompatActivity {
 
     private Button editProfileButton, changePasswordButton, deleteProfileButton, logoutButton;
-    private TextView name, email, mobile, birthDate;
+    private TextView name, email, mobile, birthDate, username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,7 @@ public class UserAccount extends AppCompatActivity {
         email = findViewById(R.id.txtEmailProfile);
         mobile = findViewById(R.id.txtMobileProfile);
         birthDate = findViewById(R.id.txtBirthDayProfile);
+        username = findViewById(R.id.txtHiUser);
 
         SharedPreferences sharedPreferences = getSharedPreferences("session", MODE_PRIVATE);
         String name1 = sharedPreferences.getString("Name", null);

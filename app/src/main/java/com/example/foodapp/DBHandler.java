@@ -26,7 +26,7 @@ public class DBHandler extends SQLiteOpenHelper {
                         UserTable.Users.COLUMN_BIRTHDATE + " DATE," +
                         UserTable.Users.COLUMN_MOBILE + " TEXT, " +
                         UserTable.Users.COLUMN_PASSWORD + " TEXT, " +
-                        UserTable.Users.COLUMN_REG_DATE + "TEXT )";
+                        UserTable.Users.COLUMN_REG_DATE + " DATE )";
 
         sqLiteDatabase.execSQL(DbEntries);
     }

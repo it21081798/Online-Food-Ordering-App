@@ -15,11 +15,15 @@ public class SideMenu extends AppCompatActivity {
     TextView myOrders;
     TextView reviews;
     TextView cards;
+    TextView username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_side_menu);
+
+        username = findViewById(R.id.txtUsernameInSideMenu);
+
 
         profile = findViewById(R.id.txtMenuMyProfile);
         profile.setOnClickListener(new View.OnClickListener() {

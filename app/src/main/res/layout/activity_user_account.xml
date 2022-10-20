@@ -9,8 +9,8 @@
 
     <Button
         android:id="@+id/btnLogout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="83dp"
+        android:layout_height="39dp"
         android:width="100dp"
         android:height="10dp"
         android:background="@drawable/round_button4"
@@ -78,28 +78,28 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="71dp"
-        android:layout_height="71dp"
+        android:layout_width="63dp"
+        android:layout_height="61dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintHorizontal_bias="0.114"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/txtTopBack"
-        app:layout_constraintVertical_bias="0.105"
+        app:layout_constraintVertical_bias="0.093"
         app:srcCompat="@drawable/user" />
 
     <TextView
         android:id="@+id/txtHiUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hiuser"
-        android:textSize="16dp"
+        android:layout_width="184dp"
+        android:layout_height="19dp"
+        android:textSize="12sp"
+        android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.341"
+        app:layout_constraintHorizontal_bias="0.137"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/txtTopBack"
-        app:layout_constraintVertical_bias="0.133" />
+        app:layout_constraintVertical_bias="0.187" />
 
     <View
         android:id="@+id/divider"
@@ -108,9 +108,10 @@
         android:background="?android:attr/listDivider"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/txtTopBack"
-        app:layout_constraintVertical_bias="0.204" />
+        app:layout_constraintVertical_bias="0.223" />
 
     <Button
         android:id="@+id/btnEditProfile"
