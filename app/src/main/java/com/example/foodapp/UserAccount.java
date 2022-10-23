@@ -13,6 +13,7 @@ public class UserAccount extends AppCompatActivity {
 
     private Button editProfileButton, changePasswordButton, deleteProfileButton, logoutButton;
     private TextView name, email, mobile, birthDate, username;
+    private DBHandler dbHandler = new DBHandler(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

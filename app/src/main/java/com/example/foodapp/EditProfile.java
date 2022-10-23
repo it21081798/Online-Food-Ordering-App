@@ -3,6 +3,7 @@ package com.example.foodapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -23,11 +24,15 @@ public class EditProfile extends AppCompatActivity {
 
     private TextView editName, editEmail, editMobile, editBirthDate;
     private Button editProfile;
+    private Context context;
+    private DBHandler dbHandler = new DBHandler(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
+
+        context = this;
 
         editName = findViewById(R.id.inputFirstName2);
         editEmail = findViewById(R.id.inputEmail2);
@@ -72,20 +77,34 @@ public class EditProfile extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                SharedPreferences sharedPreferences = getSharedPreferences("session", MODE_PRIVATE);
+                SessionManagement sessionManagement = new SessionManagement(context);
+
+                int id = sessionManagement.getSession();
                 String fullName = editName.getText().toString();
                 String email = editEmail.getText().toString();
                 String mobile = editMobile.getText().toString();
                 String birthDate = editBirthDate.getText().toString();
 
+                UserModel userModel = new UserModel(id, fullName, email, mobile, birthDate);
+
                 if (validateName() && validateEmail() && validateMobile() && validBirthDate()){
-                    Toast.makeText(getApplicationContext(), "Details Are Valid", Toast.LENGTH_LONG).show();
+                    int res = dbHandler.updateUser(userModel);
+
+                    if (res == 1) {
+                        Toast.makeText(getApplicationContext(), "Update Successful ! ", Toast.LENGTH_LONG).show();
+                        SessionManagement sessionManagement1 = new SessionManagement((EditProfile.this));
+                        sessionManagement1.saveSession(userModel);
+                        Intent intent = new Intent(EditProfile.this, UserAccount.class);
+                        startActivity(intent);
+                    }
+                    else
+                        Toast.makeText(getApplicationContext(), "Update Unsuccessful ! ", Toast.LENGTH_LONG).show();
                 }else {
                     Toast.makeText(getApplicationContext(), "Details Are Invalid ", Toast.LENGTH_LONG).show();
                 }
-
             }
         });
-
     }
 
     public boolean validateEmail(){
@@ -142,6 +161,4 @@ public class EditProfile extends AppCompatActivity {
             return true;
         }
     }
-
-
 }

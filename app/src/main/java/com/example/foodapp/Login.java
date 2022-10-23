@@ -21,7 +21,8 @@ public class Login extends AppCompatActivity {
     private static final Pattern PASSWORD_PATTERN =
             Pattern.compile("^" +
                     "(?=.*[0-9])" +         //at least 1 digit
-                    "(?=.*[a-zA-Z])" +      //any letter
+                    "(?=.*[a-z])" +         //at least 1 simple letter
+                    "(?=.*[A-Z])" +         //at least 1 capital letter
                     ".{8,}" +               //at least 8 characters
                     "$");
 

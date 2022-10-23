@@ -3,6 +3,7 @@ package com.example.foodapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -23,6 +24,9 @@ public class SideMenu extends AppCompatActivity {
         setContentView(R.layout.activity_side_menu);
 
         username = findViewById(R.id.txtUsernameInSideMenu);
+        SharedPreferences sharedPreferences = getSharedPreferences("session", MODE_PRIVATE);
+        String email1 = sharedPreferences.getString("Email", null);
+        username.setText(email1);
 
 
         profile = findViewById(R.id.txtMenuMyProfile);

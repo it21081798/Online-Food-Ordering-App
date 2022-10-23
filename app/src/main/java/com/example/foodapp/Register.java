@@ -101,7 +101,7 @@ public class Register extends AppCompatActivity {
 
                        if (result) {
                            Toast.makeText(getApplicationContext(), "Registration Successful !", Toast.LENGTH_LONG).show();
-                           goToMenuPage();
+                           goToLoginPage();
                        }else
                            Toast.makeText(getApplicationContext(), "Registration Unsuccessful !", Toast.LENGTH_LONG).show();
                    }else {
@@ -116,16 +116,15 @@ public class Register extends AppCompatActivity {
     }
 
 
-    public void goToMenuPage(){
+    /*public void goToMenuPage(){
         Intent intent = new Intent(this, SideMenu.class);
         startActivity(intent);
-    }
+    }*/
 
     public void goToLoginPage(){
         Intent intent = new Intent(this, Login.class );
         startActivity(intent);
     }
-
 
 
     public boolean validateEmail(){

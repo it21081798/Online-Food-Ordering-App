@@ -4,6 +4,7 @@ package com.example.foodapp;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.SearchRecentSuggestionsProvider;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -11,6 +12,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DBHandler extends SQLiteOpenHelper {
 
     public static final String DB_NAME = "Instania.db";
+    Context context;
 
     public DBHandler(Context context) {
         super(context, DB_NAME, null, 1);
@@ -24,9 +26,9 @@ public class DBHandler extends SQLiteOpenHelper {
                         UserTable.Users.COLUMN_FULL_NAME + " TEXT," +
                         UserTable.Users.COLUMN_EMAIL + " TEXT,"  +
                         UserTable.Users.COLUMN_BIRTHDATE + " DATE," +
-                        UserTable.Users.COLUMN_MOBILE + " TEXT, " +
-                        UserTable.Users.COLUMN_PASSWORD + " TEXT, " +
-                        UserTable.Users.COLUMN_REG_DATE + " DATE )";
+                        UserTable.Users.COLUMN_MOBILE + " TEXT," +
+                        UserTable.Users.COLUMN_PASSWORD + " TEXT," +
+                        UserTable.Users.COLUMN_REG_DATE + " DATE)";
 
         sqLiteDatabase.execSQL(DbEntries);
     }
@@ -94,5 +96,59 @@ public class DBHandler extends SQLiteOpenHelper {
         }
         else
             return null;
+    }
+
+
+    public int updateUser(UserModel userModel){
+       SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+       ContentValues contentValues = new ContentValues();
+
+       contentValues.put(UserTable.Users.COLUMN_FULL_NAME, userModel.getFullName());
+       contentValues.put(UserTable.Users.COLUMN_EMAIL, userModel.getEmail());
+       contentValues.put(UserTable.Users.COLUMN_BIRTHDATE, userModel.getBrithDate());
+       contentValues.put(UserTable.Users.COLUMN_MOBILE, userModel.getMobile());
+
+       int res = sqLiteDatabase.update(UserTable.Users.USER_TABLE_NAME, contentValues, UserTable.Users.ID +"= ?",new String[]{String.valueOf(userModel.getId())});
+       sqLiteDatabase.close();
+
+       return res;
+    }
+
+    public boolean checkPasswordWithID(int id, String currentPassword){
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        String id1  = Integer.toString(id);
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from Users where ID = ? and Password = ?", new String[]{id1, currentPassword});
+       // sqLiteDatabase.close();
+
+        if (cursor.getCount() > 0)
+            return true;
+        else
+            return false;
+    }
+
+    public boolean changePassword(int id, String newPassword){
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        String id1  = Integer.toString(id);
+        Cursor cursor = sqLiteDatabase.rawQuery("update Users set Password = ? where ID = ?", new String[]{newPassword, id1});
+        sqLiteDatabase.close();
+
+        if (cursor.getCount()>0)
+            return true;
+        else
+            return false;
+    }
+
+    public boolean deleteUser(int id){
+        String id1  = Integer.toString(id);
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("delete from Users where ID = ?", new String[]{id1});
+        //sqLiteDatabase.close();
+
+        if (cursor.getCount()>0)
+            return true;
+        else
+            return false;
+
+
     }
 }

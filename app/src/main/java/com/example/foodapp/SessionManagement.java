@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.text.style.IconMarginSpan;
 
+import java.net.NetworkInterface;
+
 public class SessionManagement {
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
@@ -39,5 +41,13 @@ public class SessionManagement {
         editor.putInt(SESSION_KEY, -1).commit();
     }
 
+    public void deleteSession(){
+        editor.putInt(SESSION_KEY, -1).commit();
+        editor.putString("Name", null).commit();
+        editor.putString("Mobile", null).commit();
+        editor.putString("Email", null).commit();
+        editor.putString("Birthdate", null).commit();
+        editor.putString("Password", null).commit();
+    }
 
 }

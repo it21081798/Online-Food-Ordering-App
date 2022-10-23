@@ -35,6 +35,14 @@ public class UserModel {
         this.regDate = regDate;
     }
 
+    public UserModel(int id, String fullName, String email, String mobile, String brithDate ) {
+        this.id = id;
+        this.fullName = fullName;
+        this.email = email;
+        this.mobile = mobile;
+        this.brithDate = brithDate;
+    }
+
     public UserModel() {
     }
 
