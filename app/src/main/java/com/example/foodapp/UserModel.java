@@ -2,12 +2,11 @@ package com.example.foodapp;
 
 public class UserModel {
     private int id;
-    private String fullName, email, mobile, brithDate, password;
+    private String fullName, email, mobile, brithDate, password, type;
     private long regDate;
 
 
-
-    public UserModel(int id, String fullName, String email, String mobile, String brithDate, String password, long regDate ) {
+    public UserModel(int id, String fullName, String email, String mobile, String brithDate, String password, long regDate) {
         this.id = id;
         this.fullName = fullName;
         this.email = email;
@@ -17,24 +16,29 @@ public class UserModel {
         this.regDate = regDate;
     }
 
-    public UserModel(int id, String fullName, String email, String mobile, String brithDate, String password ) {
+    //for session
+    public UserModel(int id, String fullName, String email, String mobile, String brithDate, String password, String type ) {
         this.id = id;
         this.fullName = fullName;
         this.email = email;
         this.mobile = mobile;
         this.brithDate = brithDate;
         this.password = password;
+        this.type = type;
     }
 
-    public UserModel(String fullName, String email, String mobile, String brithDate, String password, long regDate) {
+    //for insert
+    public UserModel(String fullName, String email, String mobile, String brithDate, String password, long regDate, String type) {
         this.fullName = fullName;
         this.email = email;
         this.mobile = mobile;
         this.brithDate = brithDate;
         this.password = password;
         this.regDate = regDate;
+        this.type = type;
     }
 
+    //for user profile
     public UserModel(int id, String fullName, String email, String mobile, String brithDate ) {
         this.id = id;
         this.fullName = fullName;
@@ -104,6 +108,15 @@ public class UserModel {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
 }

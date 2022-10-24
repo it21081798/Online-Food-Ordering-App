@@ -19,7 +19,19 @@
         app:layout_constraintHorizontal_bias="0.198"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.455" />
+        app:layout_constraintVertical_bias="0.439" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="30dp"
+        android:layout_height="46dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.039"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtTopBack5"
+        app:layout_constraintVertical_bias="0.437"
+        app:srcCompat="@drawable/order" />
 
     <TextView
         android:id="@+id/txtMenuFoodMenu"
@@ -33,7 +45,19 @@
         app:layout_constraintHorizontal_bias="0.202"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.555" />
+        app:layout_constraintVertical_bias="0.526" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="30dp"
+        android:layout_height="47dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.039"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.527"
+        app:srcCompat="@drawable/food_menu" />
 
     <TextView
         android:id="@+id/txtMenuContactUs"
@@ -47,21 +71,19 @@
         app:layout_constraintHorizontal_bias="0.201"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.656" />
+        app:layout_constraintVertical_bias="0.609" />
 
-    <TextView
-        android:id="@+id/txtMenuContactUs2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/contactus"
-        android:textColor="#000000"
-        android:textSize="18dp"
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="30dp"
+        android:layout_height="63dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.201"
+        app:layout_constraintHorizontal_bias="0.039"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.656" />
+        app:layout_constraintVertical_bias="0.612"
+        app:srcCompat="@drawable/contact" />
 
     <TextView
         android:id="@+id/txtReview"
@@ -72,10 +94,22 @@
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintHorizontal_bias="0.204"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.753" />
+        app:layout_constraintVertical_bias="0.688" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="32dp"
+        android:layout_height="31dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.039"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.685"
+        app:srcCompat="@drawable/review" />
 
     <TextView
         android:id="@+id/txtCard"
@@ -86,24 +120,54 @@
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintHorizontal_bias="0.194"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.837" />
+        app:layout_constraintVertical_bias="0.763" />
 
-    <TextView
-        android:id="@+id/txtTest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/card"
-        android:textColor="#000000"
-        android:textSize="18dp"
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="31dp"
+        android:layout_height="29dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.179"
+        app:layout_constraintHorizontal_bias="0.042"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.913" />
+        app:layout_constraintVertical_bias="0.769"
+        app:srcCompat="@drawable/card" />
+
+    <TextView
+        android:id="@+id/txtOrderManagement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Management"
+        android:textColor="#FF1100"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.252"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.841" />
+
+    <TextView
+        android:id="@+id/txtFoodMenuManagement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food Menu Management"
+        android:textColor="#FF0000"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.308"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.906" />
 
     <TextView
         android:id="@+id/txtTopBack5"
@@ -200,54 +264,6 @@
         app:layout_constraintVertical_bias="0.253"
         app:srcCompat="@drawable/home" />
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="30dp"
-        android:layout_height="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.039"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.357"
-        app:srcCompat="@drawable/profile" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="30dp"
-        android:layout_height="46dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.039"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txtTopBack5"
-        app:layout_constraintVertical_bias="0.454"
-        app:srcCompat="@drawable/order" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="30dp"
-        android:layout_height="47dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.039"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.557"
-        app:srcCompat="@drawable/food_menu" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="30dp"
-        android:layout_height="63dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.039"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.667"
-        app:srcCompat="@drawable/contact" />
-
     <TextView
         android:id="@+id/txtMenuHome"
         android:layout_width="wrap_content"
@@ -274,29 +290,45 @@
         app:layout_constraintHorizontal_bias="0.198"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.36" />
+        app:layout_constraintVertical_bias="0.349" />
 
     <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="32dp"
-        android:layout_height="31dp"
+        android:id="@+id/imageView4"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintHorizontal_bias="0.039"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.76"
-        app:srcCompat="@drawable/review" />
+        app:layout_constraintVertical_bias="0.345"
+        app:srcCompat="@drawable/profile" />
 
     <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="31dp"
+        android:id="@+id/imgFoodMenuManagement"
+        android:layout_width="26dp"
+        android:layout_height="28dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtTopBack5"
+        app:layout_constraintVertical_bias="0.911"
+        app:srcCompat="@drawable/food_manage" />
+
+    <ImageView
+        android:id="@+id/imgOderManagement"
+        android:layout_width="29dp"
         android:layout_height="29dp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintHorizontal_bias="0.039"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.843"
-        app:srcCompat="@drawable/card" />
+        app:layout_constraintVertical_bias="0.84"
+        app:srcCompat="@drawable/order_manage" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

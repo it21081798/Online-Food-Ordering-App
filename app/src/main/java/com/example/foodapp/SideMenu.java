@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class SideMenu extends AppCompatActivity {
@@ -17,7 +18,8 @@ public class SideMenu extends AppCompatActivity {
     TextView reviews;
     TextView cards;
     TextView username;
-    TextView test;
+    TextView orderManage, foodMenuManage;
+    ImageView orderManageImg, foodMenuManageImg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,15 +27,24 @@ public class SideMenu extends AppCompatActivity {
         setContentView(R.layout.activity_side_menu);
 
         username = findViewById(R.id.txtUsernameInSideMenu);
-        test = findViewById(R.id.txtTest);
+
+        orderManage = findViewById(R.id.txtOrderManagement);
+        foodMenuManage = findViewById(R.id.txtFoodMenuManagement);
+        orderManageImg = findViewById(R.id.imgOderManagement);
+        foodMenuManageImg = findViewById(R.id.imgFoodMenuManagement);
+
 
         SharedPreferences sharedPreferences = getSharedPreferences("session", MODE_PRIVATE);
         String email1 = sharedPreferences.getString("Email", null);
+        String type = sharedPreferences.getString("Type", null);
         username.setText(email1);
 
-        if (email1.equals("nimal@gmail.com"))
-            test.setVisibility(View.INVISIBLE);
-
+        if (type.equals("admin")) {
+            orderManage.setVisibility(View.VISIBLE);
+            foodMenuManage.setVisibility(View.VISIBLE);
+            orderManageImg.setVisibility(View.VISIBLE);
+            foodMenuManageImg.setVisibility(View.VISIBLE);
+        }
 
 
         profile = findViewById(R.id.txtMenuMyProfile);

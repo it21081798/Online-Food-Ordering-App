@@ -15,6 +15,7 @@ public final class UserTable {
         public static final String COLUMN_BIRTHDATE = "BirthDate";
         public static final String COLUMN_PASSWORD = "Password";
         public static final String COLUMN_REG_DATE = "Registered_Date";
+        public static final String COLUMN_TYPE = "Type";
     }
 }
 

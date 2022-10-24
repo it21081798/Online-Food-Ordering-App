@@ -24,6 +24,7 @@ public class SessionManagement {
         String mobile = users.getMobile();
         String birthDate = users.getBrithDate();
         String password = users.getPassword();
+        String type = users.getType();
 
         editor.putInt(SESSION_KEY, id).commit();
         editor.putString("Name", name).commit();
@@ -31,6 +32,7 @@ public class SessionManagement {
         editor.putString("Email", email).commit();
         editor.putString("BirthDate", birthDate).commit();
         editor.putString("Password", password).commit();
+        editor.putString("Type", type).commit();
     }
 
     public int getSession(){
@@ -48,6 +50,7 @@ public class SessionManagement {
         editor.putString("Email", null).commit();
         editor.putString("Birthdate", null).commit();
         editor.putString("Password", null).commit();
+        editor.putString("Type", null).commit();
     }
 
 }

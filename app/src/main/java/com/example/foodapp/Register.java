@@ -90,11 +90,11 @@ public class Register extends AppCompatActivity {
                String userMobile = mobile.getText().toString();
                String userBirthDate = birthDate.getText().toString();
                String userPassword = password.getText().toString();
-               //String userRePassword = rePassword.getText().toString();
                long regDate = System.currentTimeMillis();
+               String type = "user";
 
                if (validateName() && validateEmail() && validateMobile() && validBirthDate() && validatePassword()){
-                   UserModel userModel = new UserModel(userFullName, userEmail, userMobile, userBirthDate, userPassword, regDate);
+                   UserModel userModel = new UserModel(userFullName, userEmail, userMobile, userBirthDate, userPassword, regDate, type);
 
                    if (!dbHandler.checkUsername(userEmail)){
                        boolean result = dbHandler.registerUser(userModel);
@@ -142,7 +142,6 @@ public class Register extends AppCompatActivity {
     }
 
 
-
     public boolean validatePassword(){
         String userPassword = password.getText().toString();
         String userRePassword = rePassword.getText().toString();
@@ -167,7 +166,6 @@ public class Register extends AppCompatActivity {
     }
 
 
-
     public boolean validateName(){
         String userFullName = fullName.getText().toString();
 
@@ -178,7 +176,6 @@ public class Register extends AppCompatActivity {
         else
             return true;
     }
-
 
 
     public boolean validateMobile(){

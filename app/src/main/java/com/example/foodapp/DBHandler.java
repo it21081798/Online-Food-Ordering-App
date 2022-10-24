@@ -28,7 +28,8 @@ public class DBHandler extends SQLiteOpenHelper {
                         UserTable.Users.COLUMN_BIRTHDATE + " DATE," +
                         UserTable.Users.COLUMN_MOBILE + " TEXT," +
                         UserTable.Users.COLUMN_PASSWORD + " TEXT," +
-                        UserTable.Users.COLUMN_REG_DATE + " DATE)";
+                        UserTable.Users.COLUMN_REG_DATE + " DATE, " +
+                        UserTable.Users.COLUMN_TYPE + " TEXT)";
 
         sqLiteDatabase.execSQL(DbEntries);
     }
@@ -49,6 +50,7 @@ public class DBHandler extends SQLiteOpenHelper {
         contentValues.put(UserTable.Users.COLUMN_BIRTHDATE, userModel.getBrithDate());
         contentValues.put(UserTable.Users.COLUMN_REG_DATE, userModel.getRegDate());
         contentValues.put(UserTable.Users.COLUMN_PASSWORD, userModel.getPassword());
+        contentValues.put(UserTable.Users.COLUMN_TYPE, userModel.getType());
 
         long result = sqLiteDatabase.insert(UserTable.Users.USER_TABLE_NAME, null, contentValues);
         sqLiteDatabase.close();
@@ -80,7 +82,7 @@ public class DBHandler extends SQLiteOpenHelper {
     public UserModel getLoggedUser(String username){
         SQLiteDatabase sqLiteDatabase = getReadableDatabase();
 
-        Cursor cursor = sqLiteDatabase.query(UserTable.Users.USER_TABLE_NAME, new String[]{UserTable.Users.ID, UserTable.Users.COLUMN_FULL_NAME, UserTable.Users.COLUMN_EMAIL, UserTable.Users.COLUMN_MOBILE, UserTable.Users.COLUMN_BIRTHDATE, UserTable.Users.COLUMN_PASSWORD}, UserTable.Users.COLUMN_EMAIL + "= ?", new String[]{username}, null, null, null);
+        Cursor cursor = sqLiteDatabase.query(UserTable.Users.USER_TABLE_NAME, new String[]{UserTable.Users.ID, UserTable.Users.COLUMN_FULL_NAME, UserTable.Users.COLUMN_EMAIL, UserTable.Users.COLUMN_MOBILE, UserTable.Users.COLUMN_BIRTHDATE, UserTable.Users.COLUMN_PASSWORD, UserTable.Users.COLUMN_TYPE}, UserTable.Users.COLUMN_EMAIL + "= ?", new String[]{username}, null, null, null);
         UserModel userModel;
 
         if(cursor != null) {
@@ -91,7 +93,8 @@ public class DBHandler extends SQLiteOpenHelper {
                     cursor.getString(2),
                     cursor.getString(3),
                     cursor.getString(4),
-                    cursor.getString(5));
+                    cursor.getString(5),
+                    cursor.getString(6));
             return userModel;
         }
         else
