@@ -17,6 +17,7 @@ public class SideMenu extends AppCompatActivity {
     TextView reviews;
     TextView cards;
     TextView username;
+    TextView test;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +25,15 @@ public class SideMenu extends AppCompatActivity {
         setContentView(R.layout.activity_side_menu);
 
         username = findViewById(R.id.txtUsernameInSideMenu);
+        test = findViewById(R.id.txtTest);
+
         SharedPreferences sharedPreferences = getSharedPreferences("session", MODE_PRIVATE);
         String email1 = sharedPreferences.getString("Email", null);
         username.setText(email1);
+
+        if (email1.equals("nimal@gmail.com"))
+            test.setVisibility(View.INVISIBLE);
+
 
 
         profile = findViewById(R.id.txtMenuMyProfile);

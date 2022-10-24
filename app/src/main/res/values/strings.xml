@@ -7,16 +7,13 @@
 
     <string name="loginhere"><b>Log In Here</b></string>
     <string name="username">Username</string>
-    <string name="usernamehint">Enter your username here</string>
     <string name="password">Password</string>
-    <string name="passwordhint">Enter your password here</string>
     <string name="min8charactores">Minimum 8 Characters</string>
     <string name="frogotpassword">Frogot Your Password ?</string>
     <string name="didnthaveaccount">Didn\'t Have and Account ?</string>
 
     <string name="registerhere"><b>Register Here</b></string>
     <string name="fullname">Full Name</string>
-    <string name="lastname">Last Name</string>
     <string name="email">E-mail</string>
     <string name="mobile">Mobile</string>
     <string name="birthdate">Birth Date</string>
@@ -26,7 +23,6 @@
     <string name="alreadyhaveaccount">Already Have an Account ?</string>
     <string name="passwordPattern">Password Should Contain Minimum 8 Characters, At Least One Letter and At least One Digit</string>
 
-    <string name="hiuser"><b>Hi User !</b></string>
     <string name="logout">Log Out</string>
     <string name="name">Name</string>
     <string name="editprofileinaccount"><b>Edit Profile</b></string>
@@ -61,35 +57,17 @@
     <string name="addreviewbtn"><b>Save Review</b></string>
     <string name="addyourreview"><b>Add Your Review</b></string>
 
-    <string name="btnBack">Back</string>
-    <string name="cart_heading">Cart</string>
     <string name="Foodname">Barbeque Chicken Pizza</string>
-    <string name="addon_txt">Addons :</string>
-    <string name="addonDes">Extra Cheese</string>
-    <string name="addonDes2">Black Olives</string>
     <string name="Quantity_txt">Quantity</string>
-    <string name="decrement_btn">-</string>
-    <string name="checkout_btn">Checkout</string>
-    <string name="subtotal_txt">Subtotal</string>
-    <string name="delivery_txt">Delivery Charges</string>
-    <string name="total_txt">Total</string>
-    <string name="orderInfo_txt">Order Info</string>
-    <string name="name_txt">Name</string>
-    <string name="phone_txt">Phone Number</string>
-    <string name="delAdress_txt">Delivery Address</string>
-    <string name="canclOdr_txt">Cancel Order</string>
-    <string name="submit_btn1">Submit</string>
-    <string name="editOrdr_btn">Edit Order</string>
-    <string name="editDelvry_btn">Edit Delivery Details</string>
-    <string name="update_btn">Update</string>
-    <string name="feedback_txt">Feedback</string>
-    <string name="ordrDetls_heading">Order Details</string>
-    <string name="delivryDetls_heading">Delivery Details</string>
-    <string name="ordrSummry_heading">Order Summary</string>
-    <string name="updtDelryDetls_heading">Update Delivery Details</string>
-    <string name="updtOrdrDetls_heading">Update Order Details</string>
-    <string name="myOrdrs_heading">My Orders</string>
-    <string name="ordrId_txt">Order ID</string>
+    <string name="title_activity_side_menu2">SideMenu2</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
 
 
 </resources>

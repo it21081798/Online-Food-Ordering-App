@@ -9,8 +9,4 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="btuttons">#f44336</color>
-    <color name="gradient1_start">#ff9bb2</color>
-    <color name="gradient1_end">#ff436a</color>
-    <color name="gradient2_start">#f0f0f0</color>
-    <color name="gradient2_end">#eb6794</color>
 </resources>

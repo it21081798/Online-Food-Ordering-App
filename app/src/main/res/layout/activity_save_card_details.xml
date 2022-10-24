@@ -21,11 +21,11 @@
         android:layout_width="89dp"
         android:layout_height="97dp"
         app:srcCompat="@drawable/photofood"
-        tools:layout_editor_absoluteX="196dp"
-        tools:layout_editor_absoluteY="330dp" />
+        tools:layout_editor_absoluteX="225dp"
+        tools:layout_editor_absoluteY="364dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonUpdate1"
         android:layout_width="149dp"
         android:layout_height="27dp"
         android:layout_marginStart="8dp"
@@ -51,7 +51,7 @@
         app:layout_constraintVertical_bias="0.928" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonUpdate"
         android:layout_width="149dp"
         android:layout_height="27dp"
         android:layout_marginStart="8dp"
