@@ -12,6 +12,16 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DBHandler extends SQLiteOpenHelper {
 
     public static final String DB_NAME = "Instania.db";
+    private static final String TABLE_NAME = "Cdmodel";
+
+    //Columns Names
+    private static final String ID = "id";
+    private static final String CARDNUMBER = " CardNumber";
+    private static final String CARDNAME = "CardName";
+    private static final String MONTH = "Month";
+    private static final String YEAR = "Year";
+    private static final String CVV = "cvv";
+    private static final String USERID = "userid";
     Context context;
 
     public DBHandler(Context context) {
@@ -154,4 +164,81 @@ public class DBHandler extends SQLiteOpenHelper {
 
 
     }
+
+    //insert card details
+    public boolean cardsDetail(Cdmodel cdmodel){
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put(CARDNUMBER,cdmodel.getCardNumber());
+        contentValues.put(CARDNAME,cdmodel.getCardName());
+        contentValues.put(MONTH,cdmodel.getMonth());
+        contentValues.put(YEAR,cdmodel.getYear());
+        contentValues.put(CVV,cdmodel.getCvv());
+        contentValues.put(USERID, cdmodel.getUserid());
+
+        //save to table
+        long res =  sqLiteDatabase.insert(TABLE_NAME,null,contentValues);
+        //close database
+        sqLiteDatabase.close();
+
+        if (res == 1)
+            return true;
+        else
+            return false;
+    }
+
+
+    public Cdmodel getCardDetails(int id){
+        SQLiteDatabase sqLiteDatabase = getReadableDatabase();
+        String id1 = String.valueOf(id);
+
+        Cursor cursor = sqLiteDatabase.query(TABLE_NAME, new String[]{ID, CARDNUMBER,CARDNAME,MONTH,YEAR,CVV}, USERID + " = ?", new String[]{id1}, null,null, null);
+        Cdmodel cdmodel;
+
+        if(cursor != null){
+            cursor.moveToFirst();
+            cdmodel = new Cdmodel(
+                    cursor.getInt(0),
+                    cursor.getString(1),
+                    cursor.getString(2),
+                    cursor.getString(3),
+                    cursor.getString(4),
+                    cursor.getString(5));
+            return cdmodel;
+        }
+        else
+            return null;
+    }
+
+    public int updateCardDetails(Cdmodel cdmodel){
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put(CARDNUMBER, cdmodel.getCardNumber());
+        contentValues.put(CARDNAME, cdmodel.getCardName());
+        contentValues.put(MONTH, cdmodel.getMonth());
+        contentValues.put(YEAR, cdmodel.getYear());
+        contentValues.put(CVV, cdmodel.getCvv());
+
+        int res = sqLiteDatabase.update(TABLE_NAME,contentValues,ID+"= ?",new String[]{String.valueOf(cdmodel.getId())});
+        sqLiteDatabase.close();
+
+        return res;
+    }
+
+    public boolean deleteCardDetails(int id){
+        String id1  = Integer.toString(id);
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("delete from Cdmodel where ID = ?", new String[]{id1});
+
+        if (cursor.getCount()>0)
+            return true;
+        else
+            return false;
+
+    }
+
 }

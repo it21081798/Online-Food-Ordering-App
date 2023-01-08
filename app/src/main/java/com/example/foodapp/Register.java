@@ -6,13 +6,17 @@ import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Patterns;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
 
 import java.util.Calendar;
 import java.util.regex.Pattern;
@@ -35,6 +39,7 @@ public class Register extends AppCompatActivity {
     private DBHandler dbHandler;
     private Context context;
     private TextView alreadyHaveAccount;
+    private boolean passwordVisible;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +64,57 @@ public class Register extends AppCompatActivity {
 
         context = this;
         dbHandler = new DBHandler(context);
+
+        password.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                final int right = 2;
+                if (motionEvent.getAction() == MotionEvent.ACTION_UP){
+                    if (motionEvent.getRawX() >= password.getRight()-password.getCompoundDrawables()[right].getBounds().width()){
+                        int selection  = password.getSelectionEnd();
+                        if (passwordVisible){
+                            password.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.ic_baseline_visibility_off_24, 0);
+                            password.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                            passwordVisible = false;
+                        }else {
+                            password.setCompoundDrawablesRelativeWithIntrinsicBounds(0,0, R.drawable.ic_baseline_visibility_24, 0);
+                            password.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                            passwordVisible = true;
+                        }
+                        password.setSelection(selection);
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
+
+
+        rePassword.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                final int right = 2;
+                if (motionEvent.getAction() == MotionEvent.ACTION_UP){
+                    if (motionEvent.getRawX() >= rePassword.getRight()-rePassword.getCompoundDrawables()[right].getBounds().width()){
+                        int selection  = rePassword.getSelectionEnd();
+                        if (passwordVisible){
+                            rePassword.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.ic_baseline_visibility_off_24, 0);
+                            rePassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                            passwordVisible = false;
+                        }else {
+                            rePassword.setCompoundDrawablesRelativeWithIntrinsicBounds(0,0, R.drawable.ic_baseline_visibility_24, 0);
+                            rePassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                            passwordVisible = true;
+                        }
+                        rePassword.setSelection(selection);
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
+
+
 
         birthDate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,7 +147,9 @@ public class Register extends AppCompatActivity {
                String userBirthDate = birthDate.getText().toString();
                String userPassword = password.getText().toString();
                long regDate = System.currentTimeMillis();
-               String type = "user";
+               String type = "admin";
+
+                //String bcryptHashString = BCrypt.withDefaults().hashToString(12, password.toCharArray());
 
                if (validateName() && validateEmail() && validateMobile() && validBirthDate() && validatePassword()){
                    UserModel userModel = new UserModel(userFullName, userEmail, userMobile, userBirthDate, userPassword, regDate, type);

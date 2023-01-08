@@ -1,14 +1,14 @@
 package com.example.foodapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class paymentSuccess extends AppCompatActivity {
-    private ConstraintLayout success;
+    private Button success;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,12 +16,17 @@ public class paymentSuccess extends AppCompatActivity {
         setContentView(R.layout.activity_payment_success);
 
 
-        success=findViewById(R.id.success);
+        success = findViewById(R.id.nextButton);
         success.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                startActivity(new Intent(paymentSuccess.this,Orderaccept.class));
+                goToSideMenu();
             }
         });
+    }
+
+    public void goToSideMenu(){
+        Intent intent = new Intent(this, SideMenu.class);
+        startActivity(intent);
     }
 }

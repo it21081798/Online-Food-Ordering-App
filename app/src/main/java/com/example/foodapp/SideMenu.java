@@ -64,6 +64,8 @@ public class SideMenu extends AppCompatActivity {
             }
         });
 
+
+
         reviews = findViewById(R.id.txtReview);
         reviews.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,11 +86,31 @@ public class SideMenu extends AppCompatActivity {
             public void onClick(View view) { goToFoodMenu(); }
         });
 
+        myOrders = findViewById(R.id.txtMenuMyOrders);
+        myOrders.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToMyOrders();
+            }
+        });
+
+        foodMenuManage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToInsertItem();
+            }
+        });
 
 
 
 
 
+
+    }
+
+    public void goToInsertItem(){
+        Intent intent = new Intent(this, InsertItem.class);
+        startActivity(intent);
     }
 
     public void  goToMyProfile(){
@@ -98,6 +120,11 @@ public class SideMenu extends AppCompatActivity {
 
     public void goToMenu(){
         Intent intent = new Intent(this, SideMenu.class);
+        startActivity(intent);
+    }
+
+    public void goToMyOrders(){
+        Intent intent = new Intent(this, CartActivity.class);
         startActivity(intent);
     }
 
@@ -112,7 +139,7 @@ public class SideMenu extends AppCompatActivity {
     }
 
     public void  goToFoodMenu(){
-        Intent intent = new Intent(this, MainMenu.class);
+        Intent intent = new Intent(this, Category.class);
         startActivity(intent);
     }
 
